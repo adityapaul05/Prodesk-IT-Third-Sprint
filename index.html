@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dev-Detective — Case File Lookup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="folder-tab">Case File · Sprint 03</div>
+  <header class="masthead">
+    <h1 class="title">DEV-DETECTIVE</h1>
+  </header>
+  <p class="subtitle">GitHub Subject Lookup Division &nbsp;·&nbsp; ref no. <span class="case-no" id="caseNo">0000</span></p>
+
+  <section class="panel">
+    <div class="intake-row" id="intakeRow">
+      <div class="field">
+        <label for="user1">Subject alias (github username)</label>
+        <input type="text" id="user1" placeholder="e.g. octocat" autocomplete="off" />
+      </div>
+      <div class="field" id="user2Field" style="display:none;">
+        <label for="user2">Second subject (face-off)</label>
+        <input type="text" id="user2" placeholder="e.g. torvalds" autocomplete="off" />
+      </div>
+      <button class="stamp-btn" id="searchBtn" type="button">Open Case</button>
+    </div>
+
+    <div class="toggle-row">
+      <input type="checkbox" id="battleToggle" />
+      <label for="battleToggle">Face-off mode — compare two subjects head-to-head</label>
+    </div>
+
+    <p class="status-line" id="statusLine"></p>
+    <div id="resultsArea"></div>
+  </section>
+
+  <footer class="notes">
+    Data sourced live from the GitHub REST API (api.github.com).
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
